@@ -1,5 +1,6 @@
 import threading 
 import time
+
 recpationcet=threading.Semaphore(1)
 def examiantionroom(num):
     
@@ -9,10 +10,12 @@ def examiantionroom(num):
     time.sleep(2)
     print(f"patient {num} out of the room")
     recpationcet.release()
+    
 patientlist=[]  
-for i in range(5):   
+for i in range(5):
     patient=threading.Thread(target=examiantionroom,args= (i,))
     patientlist.append(patient)
     patient.start()
     
+
     

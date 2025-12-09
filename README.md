@@ -1,7 +1,4 @@
 
  Initial commit
- add to threading file
- add to semaphore file
- add to Deadlock file
- completion
+
 

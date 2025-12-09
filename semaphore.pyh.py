@@ -17,5 +17,6 @@ for i in range(5):
     patientlist.append(patient)
     patient.start()
     
-
+    patient.join()
     
+

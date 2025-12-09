@@ -1,7 +1,9 @@
 import threading
 import time
+
 resource_1=threading.Lock()
 resource_2=threading.Lock()
+
 def rec_1():
     with resource_1:
         print("thread 1 acquire resource 1")
@@ -23,7 +25,12 @@ def rec_2():
 
 a=threading.Thread(target=rec_1)  
 b=threading.Thread(target=rec_2)
+
 a.start()
-b.start()           
+b.start()  
+
+a.join()
+b.join()
              
+
         
